@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@develop
 
       - name: Merge by labeled
-        
+        uses: actions/checkout@develop
         with:
           label_name: 'merged in develop'
           target_branch: 'main'
