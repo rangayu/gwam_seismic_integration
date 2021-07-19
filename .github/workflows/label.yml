@@ -13,10 +13,10 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@develop
+      - uses: actions/checkout@v2
 
       - name: Merge by labeled
-        uses: actions/checkout@develop
+        uses: actions/checkout@v2
         with:
           label_name: 'merged in develop'
           target_branch: 'main'
