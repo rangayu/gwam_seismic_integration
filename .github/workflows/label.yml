@@ -17,8 +17,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: 'develop'
-      - name: Merge from develop
+      - name: Merge develop -> test
         uses: devmasx/merge-branch@v1.3.1
         with:
+          type: now
           target_branch: 'test'
           github_token: "${{ secrets.GITHUB_TOKEN }}"
