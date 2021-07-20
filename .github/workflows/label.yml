@@ -5,7 +5,7 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
-name: Merge branch with labeled
+name: Merge branch from develop
 on:
   push:
     branches:
@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Merge by labeled
+      - name: Merge from develop
         uses: devmasx/merge-branch@v1.3.1
         with:
-          target_branch: 'main'
+          target_branch: 'test'
           github_token: "${{ secrets.GITHUB_TOKEN }}"
