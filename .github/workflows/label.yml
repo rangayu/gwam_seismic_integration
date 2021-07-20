@@ -7,8 +7,9 @@
 
 name: Merge branch with labeled
 on:
-  pull_request:
-    types: [labeled]
+  push:
+    branches:
+    - 'develop'
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
@@ -17,6 +18,5 @@ jobs:
       - name: Merge by labeled
         uses: devmasx/merge-branch@v1.3.1
         with:
-          label_name: 'merged in develop'
           target_branch: 'main'
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
